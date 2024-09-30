@@ -14,18 +14,27 @@
 // let paragrafoDentroDiv =
 // document.querySelectorAll('#meuDiv p');
 
-// Funções para os eventos
+// // Funções para os eventos
+// function aoClicar() {
+//     alert('Você clicou no botão!');
+// }
+// function aoPerderFoco() {
+//     alert('Você saiu do campo!');
+// }
+
+// // Selecionando o elemento usando querySelector
+// let campo = document.querySelector('#meuCampo');
+// let botao = document.querySelector('.btnCampo');
+
+// // Adicionando os eventos
+// campo.addEventListener('blur', aoPerderFoco);
+// botao.addEventListener('click', aoClicar);
+
 function aoClicar() {
-    alert('Você clicou no botão!');
-}
-function aoPerderFoco() {
-    alert('Você saiu do campo!');
+    let campo = document.querySelector('#meuCampo');
+    let valorDigitado = campo.value;
+    alert('Você clicou! E está escrito: "' + valorDigitado + '"');
 }
 
-// Selecionando o elemento usando querySelector
-let campo = document.querySelector('#meuCampo');
-let botao = document.querySelector('.btnCampo');
-
-// Adicionando os eventos
-campo.addEventListener('blur', aoPerderFoco);
+let botao = document.querySelector('.btnExibaValor');
 botao.addEventListener('click', aoClicar);
